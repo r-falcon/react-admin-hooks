@@ -1,0 +1,81 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  .header {
+    width: 100%;
+    background: darkslateblue;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .title{
+      font-size: 20px;
+      letter-spacing: 1px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .headerRight{
+      display: flex;
+
+      .timer{
+        font-size: 14px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+
+      .avatarWrapper{
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+
+        .avatar{
+          cursor: pointer;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  .container {
+    margin-top: 60px;
+    height: calc(100% - 60px);
+    position: relative;
+    overflow: hidden;
+
+    .sider {
+      width: 250px;
+
+      .siderTitle{
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+
+    .app {
+      overflow-y: auto;
+
+      .content {
+        padding: 20px 20px 0;
+        flex: 1 0 auto;
+
+        .main {
+          padding: 20px;
+          background: #fff;
+        }
+      }
+
+      .footer {
+        flex: 0 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}

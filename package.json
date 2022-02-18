@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "test": "umi test",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^4.17.4",
+    "dva": "^2.6.0-beta.6",
+    "echarts": "^5.2.2",
+    "echarts-for-react": "^3.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "umi-request": "^1.4.0",
+    "wangeditor": "^4.7.11"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "commitlint": "^16.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1",
+    "react-test-renderer": "^16.7.0",
+    "umi": "^2.7.7",
+    "umi-plugin-react": "^1.8.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.bdtop {
+  border-top: 1px solid #eee;
+}
+.bdbottom {
+  border-bottom: 1px solid #eee;
+}
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+.tag {
+  margin: 10px;
+}
+.btnStyle {
+  margin-left: 20px;
+}
+.addBtn {
+  float: right;
+  margin: 10px;
+  font-size: 14px;
+}

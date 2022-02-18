@@ -1,0 +1,51 @@
+.mainBox {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+.mainBox .cardBox {
+  width: 25%;
+}
+.mainBox .cardBox .header {
+  text-align: center;
+}
+.mainBox .cardBox .header span {
+  font-size: 14px;
+  color: #666;
+}
+.mainBox .cardBox .avatarBox {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.mainBox .cardBox .avatarBox .avatar {
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+}
+.mainBox .cardBox .userBox {
+  padding-left: 0;
+  list-style: none;
+}
+.mainBox .cardBox .userBox .iconStyle {
+  font-size: 12px;
+  color: #999;
+}
+.mainBox .cardBox .userBox .liItem {
+  border-bottom: 1px solid #f0f3f4;
+  border-top: 1px solid #f0f3f4;
+  padding: 10px 0px;
+  font-size: 13px;
+  color: #666;
+}
+.mainBox .cardBox .userBox .liRight {
+  float: right;
+}
+.mainBox .infoBox {
+  width: 75%;
+  margin-left: 20px;
+}
+.mainBox .infoBox .iptWidth {
+  width: 70%;
+}
