@@ -60,3 +60,16 @@
 - 将git commit -m "XXX" 改为 git commit --no-verify -m "XXX"
 
 ### 配置代码约束和git提交规范
+- 当配置完毕提交的时候会出现如下报错
+```js
+0:0  warning  File ignored by default.  Use a negated ignore pattern (like "--ignore-pattern '!<relative/path/to/filename>'") to override
+```
+- 解决
+变动 .eslintrc.js文件的env配置，添加一行代码
+```js
+module.exports = {
+  env: {
+    "embertest": true
+  }
+};
+```
