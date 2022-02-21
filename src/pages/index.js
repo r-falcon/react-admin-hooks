@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './index.css'
 
-function App() {
+function Main() {
   return (
     <div className={styles.normal}>
       <div className={styles.welcome} />
@@ -20,4 +20,6 @@ function App() {
   )
 }
 
-export default App
+Main.displayName = 'Main'
+
+export default Main

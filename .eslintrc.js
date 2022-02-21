@@ -14,7 +14,9 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react'],
-  rules: {},
+  rules: {
+    'react/display-name': [2, { ignoreTranspilerName: true }]
+  },
   settings: {
     react: {
       version: 'detect'

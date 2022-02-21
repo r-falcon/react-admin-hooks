@@ -73,3 +73,64 @@ module.exports = {
   }
 };
 ```
+
+- 写layout布局的时候git 提交因为使用props报错
+```js
+222:53  error  'children' is missing in props validation  react/prop-types
+```
+```jsx
+// 运行没有问题，git提交报错
+<ConfigProvider locale={ZhCN}>
+  <div className={styles.main}>{props.children}</div>
+</ConfigProvider>
+```
+- 解决
+```jsx
+import PropTypes from 'prop-types'
+
+const BasicLayout = ({children}) => {
+  return <div>{children}</div>
+} 
+// 注意看清大小写
+BasicLayout.propTypes = {
+  children: PropTypes.node
+}
+```
+
+- 写layout布局 git提交报错
+```js
+ 4:16  error  Component definition is missing display name  react/display-name
+```
+
+- 解决
+```js
+// 先给displayName赋初值，再导出
+BasicLayout.displayName = 'BasicLayout'
+export default BasicLayout
+```
+
+- 写个人中心，运行时form表单发出警告
+```js
+Input elements should have autocomplete attributes
+```
+- 解决
+```js
+// input添加autocomplete属性
+ <Input
+  className={styles.iptWidth}
+  placeholder="请输入邮箱"
+  autoComplete="off"
+/>
+```
+
+- 控制台发出警告
+```js
+ [Violation] Added non-passive event listener to a scroll-blocking 'mousewheel' event. Consider marking event handler as 'passive' to make the page more responsive
+```
+
+- 解决
+安装 `npm i default-passive-events -S`
+```js
+// src下的app.js中加入
+import 'default-passive-events'
+```

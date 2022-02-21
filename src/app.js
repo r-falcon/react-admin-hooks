@@ -1,3 +1,5 @@
+import 'default-passive-events'
+
 export const dva = {
   config: {
     onError(err) {
