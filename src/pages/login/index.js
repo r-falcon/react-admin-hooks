@@ -26,7 +26,6 @@ function Login() {
     setLocalUser({ username: username, password: password, remember: remember })
     loginApi({ username: username, password: password })
       .then(res => {
-        console.log('请求成功', res)
         setToken(res.data.token)
         setUserInfo(res.data)
         message.success(res.meta.msg)
@@ -75,4 +74,7 @@ function Login() {
     </div>
   )
 }
+
+Login.displayName = 'Login'
+
 export default Login
