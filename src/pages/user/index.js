@@ -58,7 +58,7 @@ function User() {
         title: '序号',
         dataIndex: 'index',
         align: 'center',
-        render: index => `${index + 1}`
+        render: (text, record, index) => `${index + 1}`
       },
       {
         title: '用户名',
