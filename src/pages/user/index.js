@@ -271,6 +271,7 @@ function User() {
     deleteUser(id)
       .then(res => {
         message.success(res.meta.msg)
+        console.log(queryParams)
         initData(queryParams)
       })
       .catch(err => console.log(err))
