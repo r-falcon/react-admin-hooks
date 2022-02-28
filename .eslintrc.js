@@ -13,9 +13,10 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'react-hooks'],
   rules: {
-    'react/display-name': [2, { ignoreTranspilerName: true }]
+    'react/display-name': [2, { ignoreTranspilerName: true }],
+    'react/prop-types': 0
   },
   settings: {
     react: {

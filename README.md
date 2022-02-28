@@ -134,3 +134,53 @@ Input elements should have autocomplete attributes
 // src下的app.js中加入
 import 'default-passive-events'
 ```
+
+- 书写代码过程中如何实现useState()改变值后立即获取到最新的状态
+```js
+function App() {
+  const [state, setstate] = useState(0);
+
+  const setT = () => {
+    setstate(2);
+    func();
+  };
+
+  const func = () => {
+    // 点击后理应获取到state的最新值2，但是控制台打印0
+    console.log(state);
+  };
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <button onClick={setT}>set 2</button>
+      </header>
+    </div>
+  );
+}
+```
+- 解决：通过自定义hooks实现useState改变值后获取到最新状态
+```js
+// 自定义hooks实现如下
+import { useEffect, useState, useCallback } from 'react'
+
+const useSyncCallback = callback => {
+  const [proxyState, setProxyState] = useState({ current: false })
+
+  const Func = useCallback(() => {
+    setProxyState({ current: true })
+  }, [proxyState])
+
+  useEffect(() => {
+    if (proxyState.current === true) setProxyState({ current: false })
+  }, [proxyState])
+
+  useEffect(() => {
+    proxyState.current && callback()
+  })
+
+  return Func
+}
+
+export default useSyncCallback
+```
